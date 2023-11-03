@@ -102,7 +102,7 @@ bst_t *bst_search(const bst_t *tree, int value)
 bst_t *replace(bst_t *node, bst_t *new, int far_left)
 {
 	bst_t *temp = NULL, *balance = NULL;
-	_Bool left_child = false;
+	int left_child = 0;
 
 	if (node->parent)
 		left_child = node->parent->left == node;
@@ -153,7 +153,7 @@ bst_t *replace(bst_t *node, bst_t *new, int far_left)
 avl_t *avl_remove(avl_t *root, int value)
 {
 	avl_t *node, *temp;
-	_Bool left_child = false;
+	int left_child = 0;
 
 	if (!root)
 		return (NULL);
