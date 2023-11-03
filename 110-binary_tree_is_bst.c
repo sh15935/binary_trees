@@ -8,7 +8,7 @@
  * @max: maximum value of BST tree
  * Return: true or false
  */
-_Bool is_bst(const binary_tree_t *tree, int min, int max)
+int is_bst(const binary_tree_t *tree, int min, int max)
 {
 	if (!tree)
 		return (true);
