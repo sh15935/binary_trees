@@ -23,10 +23,10 @@ size_t binary_tree_size(const binary_tree_t *tree)
 int is_complete(const binary_tree_t *tree, unsigned int index, size_t size)
 {
 	if (!tree)
-		return 1;
+		return (1);
 
 	if (index >= size)
-		return 0;
+		return (0);
 
 	return (is_complete(tree->left, 2 * index + 1, size) &&
 			is_complete(tree->right, 2 * index + 2, size));
@@ -53,13 +53,13 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 int is_heap(const binary_tree_t *tree)
 {
 	if (!tree->left && !tree->right)
-		return 1;
+		return (1);
 	if (!tree->right)
 		return (tree->n >= tree->left->n);
 	if (tree->n >= tree->left->n && tree->n >= tree->right->n)
 		return (is_heap(tree->left) && is_heap(tree->right));
 	else
-		return 0;
+		return (0);
 }
 
 
